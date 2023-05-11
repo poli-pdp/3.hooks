@@ -1,9 +1,15 @@
-import React from 'react'
+import { useState } from 'react';
+import FetchAPI from './components/FetchAPI';
+import Lifecycle from './components/Lifecycle';
 
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+	const [showLifecycle, setShowLifecycle] = useState(false);
+	return (
+		<div>
+			{showLifecycle && <Lifecycle />}
+			<FetchAPI />
+		</div>
+	);
+};
 
-export default App
+export default App;
